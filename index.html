@@ -129,6 +129,23 @@
             /* Safari 3-8 */
             transform: scale(1.5);
         }
+
+        .cart {
+  background-color : #fcc106;
+  padding: 10px 20px;
+  
+}
+
+#myCart {
+  position: fixed;
+  bottom: -4px;
+  right: 20px;
+}
+
+table, th, td {
+  border: 1px solid lightgrey;
+  text-align: center;
+}
     </style>
 </head>
 
@@ -321,8 +338,8 @@
                     </div>
                        
                 </div>
-            <!-- </div>
-            <div class="wp-section">
+            </div>
+            <!-- <div class="wp-section">
                 <div style="margin-top" class="content">
                     <div style="float: left;" id="desktop">
                         <h3>Desktop Wallpaper</h3>
@@ -339,14 +356,13 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
             <div class="press-kit">
                 <div id="press-container">
-                    <a href="http://dott.doublefine.com/downloads/DOTT-Remastered-Press-Kit.zip" name="presskit"
-                        class="presskit">Download Press Kit! <img class="arrow" src="img/arrow.png"></a>
+                    
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <!-- Store -->
@@ -383,7 +399,52 @@
                         <img class="zoom" src="img/merch6.jpg" data-toggle="modal" data-target="#merch6">
                     </div>
                 </div>
+
+                <div id="myCart">
+                    <button class="cart" data-toggle="modal" data-target="#modalCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    </div>
             </div>
+
+            <!--Modal Cart-->
+        <div class="modal fade" id="modalCart" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>My Cart</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       <table>
+                           <tr>
+                               <th>Qty.</th>
+                               <th>Item</th>
+                               <th style="width: 20%;">Image</th>
+                               <th>Price</th>
+                           </tr>
+                           <tr>
+                               <td>1</td>
+                               <td>DOTT Plushie</td>
+                               <td><img src="img/merch6.jpg" style="width: 70%;"></td>
+                               <td>Rp. 150.000</td>
+                           </tr>
+                           <tr>
+                            <td>1</td>
+                            <td>DOTT Mug #2</td>
+                            <td><img src="img/merch5.jpg" style="width: 70%;"></td>
+                            <td>Rp. 75.000</td>
+                        </tr>
+                       </table>
+                       <p style="text-align: right; color: #2aaede; margin-right: 2%;">Total : 225.000</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Checkout</button>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <!-- Modal Stores-->
             <div class="modal fade " id="merch1" tabindex="-1" role="dialog">
@@ -614,6 +675,7 @@
             </div>
         </div>
 
+        
 
         <!-- Footer -->
 
